@@ -23,7 +23,7 @@ const DataInput = () => {
         setError('');
         try {
             const jsonData = JSON.parse(inputData);
-            const response = await axios.post('http://localhost:3000/bfhl', jsonData);
+            const response = await axios.post('https://bhfl-backend-cabm.onrender.com/', jsonData);
             setResponseData(response.data);
         } catch (err) {
             console.error('Submission error:', err);
